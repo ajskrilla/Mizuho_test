@@ -37,5 +37,4 @@ with open(path, 'r') as f:
         new_args = rem_null(wanted)
         new_args['ProxyUserIsManaged'] = False
         new_args['ProxyUser'] = ""
-        print(new_args['ProxyUserIsManaged'])
         other_requests(Call='/ServerManage/UpdateResource', **new_args, Debug=True)
