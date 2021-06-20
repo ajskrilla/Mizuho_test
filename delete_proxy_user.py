@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
 path = os.path.abspath(args['Path'])
 log.info("Path to the csv file to add resources is: {0}".format(path))
-with open(path, 'r', encoding='utf-8') as f:
+with open(path, 'r', encoding='utf-8-sig') as f:
     d_reader = csv.DictReader(f)
     for line in d_reader:
         log.info("Querying for ID to use on system whose name is: {0}".format(line['Name']))
